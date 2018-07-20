@@ -21,6 +21,8 @@ The following functions are implemented: _(more to come)_
 
 ```{r eval=FALSE}
 devtools::install_github("hrbrmstr/roto.s3")
+# OR
+devtools::install_git("git://gitlab.com/hrbrmstr/roto.s3")
 ```
 
 ```{r message=FALSE, warning=FALSE, error=FALSE, include=FALSE}
