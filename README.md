@@ -14,8 +14,9 @@ requires ‘Python’ version 3.5+ and an ‘AWS’ account.
 
 The following functions are implemented: *(more to come)*
 
-  - `download_file`: Download an S3 object to a file.
-  - `upload_file`: Upload a file to an S3 object.
+  - `download_file`: Download an S3 object to a file
+  - `upload_file`: Upload a file to an S3 object
+  - `file_exists`: Test if a file exists in the specified bucket
 
 ## Installation
 
@@ -48,7 +49,15 @@ upload_file(
   key = "mtcars.csv",
   profile_name = "personal"
 )
+
+file_exists(
+  bucket = "is.rud.test", 
+  key = "mtcars.csv", 
+  profile_name = "personal"
+)
 ```
+
+    ## [1] TRUE
 
 ### Download
 

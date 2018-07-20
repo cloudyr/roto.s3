@@ -2,7 +2,7 @@
 % Please edit documentation in R/upload-file.R
 \name{upload_file}
 \alias{upload_file}
-\title{Upload a file to an S3 object.}
+\title{Upload a file to an S3 object}
 \usage{
 upload_file(filename, bucket, key, extra_args = NULL,
   transfer_config = list(multipart_threshold = 8388608L, max_concurrency =
@@ -57,7 +57,7 @@ be ran in the main thread.
 \item{profile_name}{profile name}
 }
 \description{
-Upload a file to an S3 object.
+Upload a file to an S3 object
 }
 \examples{
 \dontrun{

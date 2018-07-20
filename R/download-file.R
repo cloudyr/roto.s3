@@ -1,4 +1,4 @@
-#' Download an S3 object to a file.
+#' Download an S3 object to a file
 #'
 #' @md
 #' @param bucket name of the bucket to download from.

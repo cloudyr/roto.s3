@@ -2,7 +2,7 @@
 % Please edit documentation in R/download-file.R
 \name{download_file}
 \alias{download_file}
-\title{Download an S3 object to a file.}
+\title{Download an S3 object to a file}
 \usage{
 download_file(bucket, key, filename, extra_args = NULL,
   transfer_config = list(multipart_threshold = 8388608L, max_concurrency =
@@ -57,7 +57,7 @@ be ran in the main thread.
 \item{profile_name}{profile name}
 }
 \description{
-Download an S3 object to a file.
+Download an S3 object to a file
 }
 \examples{
 \dontrun{

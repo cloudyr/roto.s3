@@ -1,4 +1,4 @@
-#' Upload a file to an S3 object.
+#' Upload a file to an S3 object
 #'
 #' @md
 #' @param filename path to the file to download to.

@@ -14,8 +14,9 @@ This is a 'reticulated' wrapper for the 'Python' 'boto3' 'AWS' 'S3' client libra
 
 The following functions are implemented: _(more to come)_
 
-- `download_file`:	Download an S3 object to a file.
-- `upload_file`:	Upload a file to an S3 object.
+- `download_file`:	Download an S3 object to a file
+- `upload_file`:	Upload a file to an S3 object
+- `file_exists`:  Test if a file exists in the specified bucket
 
 ## Installation
 
@@ -54,6 +55,12 @@ upload_file(
   filename = "/tmp/mtcars.csv", 
   bucket = "is.rud.test", 
   key = "mtcars.csv",
+  profile_name = "personal"
+)
+
+file_exists(
+  bucket = "is.rud.test", 
+  key = "mtcars.csv", 
   profile_name = "personal"
 )
 ```
