@@ -1,0 +1,74 @@
+---
+output: rmarkdown::github_document
+---
+
+# roto.s3
+
+Access and Orchestrate Amazon Simple Storage Service
+
+## Description
+
+This is a 'reticulated' wrapper for the 'Python' 'boto3' 'AWS' 'S3' client library <https://boto3.readthedocs.io/en/latest/reference/services/s3.html>. It requires 'Python' version 3.5+ and an 'AWS' account.
+
+## What's Inside The Tin
+
+The following functions are implemented: _(more to come)_
+
+- `download_file`:	Download an S3 object to a file.
+- `upload_file`:	Upload a file to an S3 object.
+
+## Installation
+
+```{r eval=FALSE}
+devtools::install_github("hrbrmstr/roto.s3")
+```
+
+```{r message=FALSE, warning=FALSE, error=FALSE, include=FALSE}
+options(width=120)
+```
+
+## Usage
+
+```{r message=FALSE, warning=FALSE, error=FALSE}
+library(roto.s3)
+library(tidyverse)
+
+# current verison
+packageVersion("roto.s3")
+
+```
+
+```{r echo=FALSE}
+suppressMessages(suppressWarnings(unlink("/tmp/mtcars.csv", force=TRUE)))
+suppressMessages(suppressWarnings(unlink("/tmp/mtcars-01.csv", force=TRUE)))
+```
+
+### Upload
+
+```{r}
+write_csv(mtcars, "/tmp/mtcars.csv")
+
+upload_file(
+  filename = "/tmp/mtcars.csv", 
+  bucket = "is.rud.test", 
+  key = "mtcars.csv",
+  profile_name = "personal"
+)
+```
+
+### Download
+
+```{r}
+download_file(
+  bucket = "is.rud.test", 
+  key = "mtcars.csv", 
+  filename = "/tmp/mtcars-again.csv", 
+  profile_name = "personal"
+)
+
+read_csv("/tmp/mtcars-again.csv")
+```
+
+
+
+
