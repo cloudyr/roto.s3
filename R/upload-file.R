@@ -1,9 +1,10 @@
 #' Upload a file to an S3 object
 #'
 #' @md
-#' @param filename path to the file to download to.
-#' @param bucket name of the bucket to download from.
-#' @param key name of the key to download from.
+#' @param filename path to the _local_ file to upload
+#' @param bucket name of the bucket to upload to.
+#' @param key name of the key to use (i.e. the _remote_ filename). Defaults to the basename
+#'        of `filename`
 #' @param extra_args arguments that may be passed to the client operation.
 #' @param transfer_config transfer configuration to be used when performing the transfer.
 #' Pre-defined, default values are provided for the following settings:
@@ -40,7 +41,7 @@
 #' }
 upload_file <- function(filename,
                         bucket,
-                        key,
+                        key = basename(filename),
                         extra_args = NULL,
                         transfer_config = list(
                           multipart_threshold = 8388608L,

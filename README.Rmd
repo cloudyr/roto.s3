@@ -14,6 +14,8 @@ This is a 'reticulated' wrapper for the 'Python' 'boto3' 'AWS' 'S3' client libra
 
 The following functions are implemented: _(more to come)_
 
+- `create_bucket`:	Create a new S3 bucket
+- `delete_bucket`:	Delete an S3 bucket
 - `download_file`:	Download an S3 object to a file
 - `upload_file`:	Upload a file to an S3 object
 - `file_exists`:  Test if a file exists in the specified bucket

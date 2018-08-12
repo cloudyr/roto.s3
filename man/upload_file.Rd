@@ -4,7 +4,7 @@
 \alias{upload_file}
 \title{Upload a file to an S3 object}
 \usage{
-upload_file(filename, bucket, key, extra_args = NULL,
+upload_file(filename, bucket, key = basename(filename), extra_args = NULL,
   transfer_config = list(multipart_threshold = 8388608L, max_concurrency =
   10L, multipart_chunksize = 8388608L, num_download_attempts = 5L, max_io_queue
   = 100L, io_chunksize = 262144L, use_threads = TRUE),
@@ -12,11 +12,12 @@ upload_file(filename, bucket, key, extra_args = NULL,
   aws_session_token = NULL, region_name = NULL, profile_name = NULL)
 }
 \arguments{
-\item{filename}{path to the file to download to.}
+\item{filename}{path to the \emph{local} file to upload}
 
-\item{bucket}{name of the bucket to download from.}
+\item{bucket}{name of the bucket to upload to.}
 
-\item{key}{name of the key to download from.}
+\item{key}{name of the key to use (i.e. the \emph{remote} filename). Defaults to the basename
+of \code{filename}}
 
 \item{extra_args}{arguments that may be passed to the client operation.}
 

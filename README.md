@@ -14,6 +14,8 @@ requires ‘Python’ version 3.5+ and an ‘AWS’ account.
 
 The following functions are implemented: *(more to come)*
 
+  - `create_bucket`: Create a new S3 bucket
+  - `delete_bucket`: Delete an S3 bucket
   - `download_file`: Download an S3 object to a file
   - `upload_file`: Upload a file to an S3 object
   - `file_exists`: Test if a file exists in the specified bucket
